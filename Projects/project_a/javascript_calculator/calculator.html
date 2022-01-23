@@ -1,0 +1,68 @@
+<!--
+  File: calculator.html
+
+  Description : 
+    This file contains the HTML which displays the calculator webpage
+    for the JavaScript calculator used for requirement 5a
+
+  TODO :
+    THIS FILE SHOULD NOT BE EDITED
+
+  Demonstration :
+    Open the calculator.html file in a browser. Then using the displayed
+     calculator perform some calculations as requested by your councilor.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple JavaScript Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+  </head>
+  <body>
+    <h1>Simple JavaScript Calculator</h1>
+
+    <div class = "formstyle">
+      <form id="signup">
+        <!-- The calculator display -->
+        <input type="text" id="display" readonly>
+        <br> <br>
+
+        <!-- The first row of the calculator -->
+        <input type = "button" value = "1" onclick = "numPressed(1)">
+        <input type = "button" value = "2" onclick = "numPressed(2)">
+        <input type = "button" value = "3" onclick = "numPressed(3)">
+        <input type = "button" value = "+" onclick = "plusPressed()">
+        <br> <br>
+
+        <!-- The second row of the calculator -->
+        <input type = "button" value = "4" onclick = "numPressed(4)">
+        <input type = "button" value = "5" onclick = "numPressed(5)">
+        <input type = "button" value = "6" onclick = "numPressed(6)">
+        <input type = "button" value = "-" onclick = "minusPressed()">
+        <br> <br>
+
+        <!-- The third row of the calculator -->
+        <input type = "button" value = "7" onclick = "numPressed(7)">
+        <input type = "button" value = "8" onclick = "numPressed(8)">
+        <input type = "button" value = "9" onclick = "numPressed(9)">
+        <input type = "button" value = "*" onclick = "timesPressed()">
+        <br> <br>
+
+        <!-- The fourth row of the calculator -->
+        <input type = "button" value = "/" onclick = "dividePressed()">
+        <input type = "button" value = "0" onclick = "numPressed(0)">
+        <input type = "button" value = "." onclick = "dotPressed()">
+        <input type = "button" value = "=" onclick = "equalPressed()">
+        <br> <br>
+
+        <!-- The Calculator Clear Button -->
+        <input type = "button" value = "Clear" onclick = "clearPressed()" id= "clear" >
+        <br>
+      </form>
+    </div>
+
+    <!-- Includes the JavaScript from the calculate.js files -->
+    <script src="calculate.js"></script>
+  </body>
+</html>

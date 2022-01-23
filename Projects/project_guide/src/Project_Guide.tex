@@ -1,0 +1,121 @@
+\documentclass[letterpaper,12pt]{book}
+\nonstopmode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting
+\usepackage[headheight=35pt,hmargin=0.5in,vmargin=0.75in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{fancyhdr, parskip}
+\usepackage{listings}
+
+% Tables and Figures
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xltabular}
+\usepackage[framemethod=TikZ]{mdframed}
+
+% Citations
+\usepackage{cite}
+
+% Additional Info
+\usepackage{lastpage}
+
+% Hyperref Should remain the last import in most circumstances
+\usepackage{hyperref}
+  \hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta
+    urlcolor=cyan
+  }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title Page Information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Scouts BSA Programming Project Guide}
+\author{
+  Benjamin Davis [\href{mailto:benjamin.j.davis96@gmail.com}{benjamin.j.davis96@gmail.com}]
+}
+\date{Copyright \copyright\ \the\year\ Benjamin Davis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header & Footer Information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancypagestyle{plain} {
+  \fancyhf{}
+  \fancyhead[L]{BSA Programming MB}
+  \fancyhead[R]{\leftmark}
+  \fancyfoot[R]{\thepage}
+}
+
+\fancypagestyle{simple}{
+  \fancyhf{}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Graphics Information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{ {./images} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Start Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+  \pagestyle{simple}
+  \maketitle
+  
+  \begin{center}
+    \vspace*{\fill}
+    The copyright holders grant the freedom to copy, modify, convey, adapt, and/or redistribute this work
+    under the terms of the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+    International License. A copy of that license is available at
+    \url{https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode}.
+    \vspace*{\fill}
+  \end{center}
+
+  \frontmatter
+  \pagestyle{plain}
+
+  \tableofcontents
+
+  \mainmatter
+
+  \input{../src/Introduction.tex}
+
+  \input{../src/Project_A.tex}
+
+  \input{../src/Project_B.tex}
+
+  \input{../src/Project_C.tex}
+
+\appendix
+
+  \chapter{Developing in Windows vs Linux vs Mac}
+  \label{app:dev_os}
+
+    \section{WSL: The Best of Both Worlds?}
+
+  \chapter{Language Installations}
+  \label{app:lang_installations}
+
+    \section{JavaScript}
+
+    \section{Python}
+
+    \section{C++}
+
+    \section{C}
+
+    \section{BASIC}
+
+    \section{Fortran}
+
+    \section{Prolog}
+
+    \section{SystemVerilog, Verilog, VHDL}
+    \label{app:installations:HDL}
+
+\end{document}
