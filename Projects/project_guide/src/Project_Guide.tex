@@ -9,9 +9,12 @@
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{fancyhdr, parskip}
 \usepackage{listings}
+\usepackage{placeins}
 
 % Tables and Figures
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{multirow}
 \usepackage{xltabular}
 \usepackage[framemethod=TikZ]{mdframed}
@@ -57,7 +60,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Graphics Information
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\graphicspath{ {./images} }
+\graphicspath{./images}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Start Document
@@ -85,6 +88,8 @@
 
   \input{../src/Introduction.tex}
 
+  \input{../src/Getting_Started.tex}
+
   \input{../src/Project_A.tex}
 
   \input{../src/Project_B.tex}
@@ -98,8 +103,12 @@
 
     \section{WSL: The Best of Both Worlds?}
 
-  \chapter{Language Installations}
-  \label{app:lang_installations}
+  \chapter{Tool Installations}
+  \label{app:tool_installations}
+    This appendix contains the instructions necessary to install the various tools on a variety of operating
+      systems.
+    Currently it is heavily lacking, but can be easily updated upon request if a scout is opting to use
+      an operating system and language which are not currently listed.
 
     \section{JavaScript}
 
