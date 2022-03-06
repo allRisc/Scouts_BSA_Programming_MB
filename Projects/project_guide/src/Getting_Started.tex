@@ -1,3 +1,5 @@
+\graphicspath{ {../src/images/} {./images/} }
+
 \chapter{Getting Started}
 \label{chap:getting_started}
 
@@ -6,9 +8,9 @@
   Doing so allows for the following notable advantages:
 
   \begin{enumerate}
-    \item No Installations necessary
+    \item Only one installation necessary
     \begin{itemize}
-      \item All of the tools necessary for any project have been pre-installed on the VM
+      \item All of the tools necessary for any project can be installed on the VM with one command
     \end{itemize}
     \item Guaranteed Compatibility
     \begin{itemize}
@@ -18,6 +20,10 @@
     \begin{itemize}
       \item All of the instructions and examples in this project have been designed with the VM in mind
     \end{itemize}
+    \item Improved Cyber Security
+    \begin{itemize}
+      \item Using a VM keeps all of the programming and activity which is done inside the VM seperate from the main computer
+    \end{itemize}
   \end{enumerate}
 
   The remainder of this chapter is spent allowing for install and a quick guide to the operating system.
@@ -25,8 +31,39 @@
   \section{Installing VM Software}
   \label{sec:installing_vm_software}
 
+    There are a wide variety of VM software available on the market.
+    I strongly recommend using Oracle's VirtualBox as it is free software which is created by a 
+      reliable and trusted industry member.
+    That being said if you prefer the use of a different VM software that should be easily supported
+      by the rest of this project guide.
+
+    \subsection{Installing VirtualBox}
+    \label{ssec:installing_virtualbox}
+
+      To start we need to download VirtualBox.
+      This can be done by navigating to the official webpage at \href{https://www.virtualbox.org/wiki/Downloads}
+        {https://www.virtualbox.org/wiki/Downloads} (see \autoref{fig:virtualbox_download_page}).
+      Select the platform package which corresponds to the OS of your personal computer (macOS = OS X).
+      
+      \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.8\linewidth]{virtualbox_download_page.png}
+        \caption{VirtualBox Download Page}
+        \label{fig:virtualbox_download_page}
+      \end{figure}
+      \FloatBarrier
+
+      Run the executable and install VirtualBox by following instructions.
+
   \section{Importing the Programming Merit Badge VM}
   \label{sec:import_merit_badge_vm}
+
+    In order to provide the easiest starting spot for the VM a pre-made file has been created.
+    Use a web-broswer to navigate to the \href{Google Drive Folder}{https://drive.google.com/drive/folders/1rE8jUb4SAwdj-uCSRVqeH7lIxF3ttpCl?usp=sharing}
+      and download the \texttt{Scounts_Programming_MB.ova} file.
+    This is a fairly large file (it contains an entire computer after all) and may take awhile to download.
+
+    \FloatBarrier
 
   \section{Getting Familiar with the VM}
   \label{sec:getting_familiar_with_vm}
@@ -55,7 +92,7 @@
 
     \begin{figure}[ht]
       \centering
-      \includegraphics[width=0.8\linewidth]{./images/desktop.png}
+      \includegraphics[width=0.8\linewidth]{desktop.png}
       \caption{Desktop View}
       \label{fig:desktop_view}
     \end{figure}
@@ -74,13 +111,13 @@
       \centering
       \begin{subfigure}{0.4\textwidth}
         \centering
-        \includegraphics[width=0.5\linewidth]{./images/terminal.png}
+        \includegraphics[width=0.5\linewidth]{terminal.png}
         \caption{Terminal Icon}
         \label{fig:terminal_icon}
       \end{subfigure}
       \begin{subfigure}{0.4\textwidth}
         \centering
-        \includegraphics[width=0.5\linewidth]{./images/vs_code.png}
+        \includegraphics[width=0.5\linewidth]{vs_code.png}
         \caption{VS Code Icon}
         \label{fig:vs_code_icon}
       \end{subfigure}
@@ -96,7 +133,7 @@
 
     \begin{figure}[ht]
       \centering
-      \includegraphics[width=0.8\linewidth]{./images/home_file_list.png}
+      \includegraphics[width=0.8\linewidth]{home_file_list.png}
       \caption{Home Directory File List}
       \label{fig:home_file_list}
     \end{figure}
@@ -111,7 +148,7 @@
 
     \begin{figure}[ht]
       \centering
-      \includegraphics[width=0.8\linewidth]{./images/projects_file_list.png}
+      \includegraphics[width=0.8\linewidth]{projects_file_list.png}
       \caption{Project Directory File List}
       \label{fig:proj_file_list}
     \end{figure}
@@ -128,7 +165,7 @@
 
     \begin{figure}[ht]
       \centering
-      \includegraphics[width=0.8\linewidth]{./images/hello_world.png}
+      \includegraphics[width=0.8\linewidth]{hello_world.png}
       \caption{Project Directory File List}
       \label{fig:hello_world_example}
     \end{figure}
