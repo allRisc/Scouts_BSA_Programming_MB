@@ -25,6 +25,9 @@
 % Additional Info
 \usepackage{lastpage}
 
+% Useful Packages
+\usepackage{import}
+
 % Hyperref Should remain the last import in most circumstances
 \usepackage{hyperref}
   \hypersetup{
@@ -94,9 +97,12 @@
 
   \input{../src/Project_B.tex}
 
-  \input{../src/Project_C.tex}
+  \import{src}{Project_C.tex}
 
 \appendix
+
+  \chapter{How do I write a program?}
+  \label{app:how_do_i_write_a_program}
 
   \chapter{Developing in Windows vs Linux vs Mac}
   \label{app:dev_os}

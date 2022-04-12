@@ -1,4 +1,4 @@
-\graphicspath{ {../src/images/} {./images/} }
+\graphicspath{ {images/VM_Install} {images/Ubuntu_Intro} }
 
 \chapter{Getting Started}
 \label{chap:getting_started}
@@ -53,7 +53,8 @@
       \end{figure}
       \FloatBarrier
 
-      Run the executable and install VirtualBox by following instructions.
+      Run the executable and install VirtualBox by following the instructions.
+      (\textit{Note: if prompted to choose which features are to be installed the following are required at a minimum; USB Support and Networking}).
 
   \section{Importing the Programming Merit Badge VM}
   \label{sec:import_merit_badge_vm}
@@ -62,7 +63,47 @@
     Use a web-broswer to navigate to the \href{Google Drive Folder}{https://drive.google.com/drive/folders/1rE8jUb4SAwdj-uCSRVqeH7lIxF3ttpCl?usp=sharing}
       and download the \texttt{Scounts_Programming_MB.ova} file.
     This is a fairly large file (it contains an entire computer after all) and may take awhile to download.
+    (\textit{Note: if you are unable to download the file your councilor can provide you a USB drive which contains a copy of the file})
 
+    Now open \texttt{VirtualBox} (installed \autoref{ssec:installing_virtualbox}).
+    You should see a screen like shown in \autoref{fig:virtualbox_home_screen} at which point click the import arrow.
+    This will open an import screen.
+    Use this screen to select the \texttt{Scounts_Programming_MB.ova} we downloaded earlier and click \textit{next}.
+
+    \begin{figure}[ht]
+      \centering
+      \includegraphics[width=0.8\linewidth]{virtualbox_home_screen.png}
+      \caption{VirtualBox Home Screen}
+      \label{fig:virtualbox_home_screen}
+    \end{figure}
+    \FloatBarrier
+
+    This should bring up a screen like the one shown in \autoref{fig:virtualbox_advanced_mode}.
+    Here you are able to set a lot of options about how you want your VM to behave.
+    The two we are most interested in are \textit{CPU} and \textit{RAM}.
+    If you know how many CPU cores or how much ram you have in your computer you can use up to half of each without having any issues.
+    However, if you are unsure how your computer is equipped talk to your councilor or choose the safe \textit{CPU = 2} and \textit{RAM = 2048 MB}.
+
+    \begin{figure}[ht]
+      \centering
+      \includegraphics[width=0.8\linewidth]{virtualbox_advanced_mode.png}
+      \caption{VirtualBox Advanced Settings}
+      \label{fig:virtualbox_advanced_mode}
+    \end{figure}
+    \FloatBarrier
+
+    Now hit import and wait a couple of minutes while the VM imports.
+    Once the import is complete you should see the home screen again.
+    This time there should be a Scouts_Programming_MB VM on the left side (as seen in \autoref{fig:virtualbox_import_complete}).
+    Click this VM and then hit start.
+    Now that you've got the VM imported head down to \autoref{sec:getting_familiar_with_vm} to continue!
+
+    \begin{figure}[ht]
+      \centering
+      \includegraphics[width=0.8\linewidth]{virtualbox_import_complete.png}
+      \caption{VirtualBox Import Complete}
+      \label{fig:virtualbox_import_complete}
+    \end{figure}
     \FloatBarrier
 
   \section{Getting Familiar with the VM}
