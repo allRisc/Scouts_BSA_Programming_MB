@@ -11,5 +11,3 @@ Modify the code or add a function or subroutine to it.
 Debug and demonstrate the modified program to your counselor.
 
 ## Option 1 - JavaScript Calculator
-
-## Option 2 - 

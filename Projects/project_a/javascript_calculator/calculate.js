@@ -9,12 +9,12 @@
  *  1 - Create a variable to represent the last operator clicked
  *  2 - When Minus is pressed store the current value as the previous value
  *        and update the display element to the current value
- *  3 - When times (*) is pressed clear the current value and update the operator
- *  4 - Create the dividePressed method. This method should perform the previous
+ *  3 - Add multiplication and division operations to the calculate function
+ *  4 - When times (*) is pressed clear the current value and update the operator
+ *  5 - Create the dividePressed method. This method should perform the previous
  *        calculation if there one. Then store the current value as the previous value
  *        and update the display element to the current value. Finally clear the 
  *        current value and update the operator
- *  5 - Add multiplication and division operations to the calculate function
  * 
  * Demonstration :
  *  Open the calculator.html file in a browser. Then using the displayed
@@ -24,13 +24,15 @@
 
 let prevValue = ""
 let currentValue = ""
-// TODO 1 - Create a variable to represent the last operator clicked
+// TODO 1 - Create a variable called 'operator' to represent the last operator clicked
 
 /*
  * This function is called when one of the numbers of the calculator is pressed.
  *  It is passed the num argument which represents the value of the number pressed
  */
 function numPressed(num) {
+  console.log("#" + num + " pressed")
+  
   currentValue = currentValue + num;
   document.getElementById("display").setAttribute("value", currentValue);
 }
@@ -39,8 +41,17 @@ function numPressed(num) {
  * This function is called when the plus symbol on the calculator is pressed.
  */
 function plusPressed() {
+  console.log("+ pressed")
+  // Check if there is an operator set
   if (operator != "") {
-    calculate();
+    // If there is an operator set and there is a currentValue then calculate the previous result
+    //  If the operator is set and there is not a current value then just change the current operator and stop
+    if (currentValue != "") {
+      currentValue = calculate();
+    } else {
+      operator = "+";
+      return;
+    }
   }
 
   prevValue = currentValue;
@@ -54,8 +65,17 @@ function plusPressed() {
  * This function is called when the plus symbol on the calculator is pressed.
  */
 function minusPressed() {
+  console.log("- pressed")
+  // Check if there is an operator set
   if (operator != "") {
-    calculate();
+    // If there is an operator set and there is a currentValue then calculate the previous result
+    //  If the operator is set and there is not a current value then just change the current operator and stop
+    if (currentValue != "") {
+      currentValue = calculate();
+    } else {
+      operator = "+";
+      return;
+    }
   }
 
   // TODO 2 - When Minus is pressed store the current value as the previous value
@@ -70,14 +90,24 @@ function minusPressed() {
  * This function is called when the times symbol (*) on the calculator is pressed.
  */
 function timesPressed() {
+  console.log("* pressed")
+  // Check if there is an operator set
   if (operator != "") {
-    calculate();
+    // If there is an operator set and there is a currentValue then calculate the previous result
+    //  If the operator is set and there is not a current value then just change the current operator and stop
+    if (currentValue != "") {
+      currentValue = calculate();
+    } else {
+      operator = "+";
+      return;
+    }
   }
 
   prevValue = currentValue;
   document.getElementById("display").setAttribute("value", currentValue);
 
-  // TODO 3 - When times (*) is pressed clear the current value and update the operator
+  currentValue = "";
+  operator = "*";
 }
 
 // TODO 4 - Create the dividePressed method. This method should perform the previous
@@ -86,6 +116,7 @@ function timesPressed() {
 //            current value and update the operator
 
 function dotPressed() {
+  console.log(". pressed")
   currentValue = currentValue + ".";
 }
 
@@ -93,7 +124,8 @@ function dotPressed() {
  * This function is called when the equals symbol on the calculator is pressed.
  */
 function equalPressed() {
-  calculate();
+  console.log("= pressed")
+  currentValue = calculate();
   document.getElementById("display").setAttribute("value", currentValue);
 
   operator = ""
@@ -105,11 +137,13 @@ function equalPressed() {
  */
 function calculate() {
   if (operator == "+") {
-    currentValue = parseFloat(currentValue) + parseFloat(prevValue);
+    return parseFloat(currentValue) + parseFloat(prevValue);
   } else if (operator == "-") {
-    currentValue = parseFloat(currentValue) - parseFloat(prevValue);
+    return parseFloat(currentValue) - parseFloat(prevValue);
   }
-  // TODO 5 - Add multiplication and division operations to the calculate function
+  // TODO 3 - Add multiplication and division operations to the calculate function
+
+  return parseFloat(currentValue)
 }
 
 /*

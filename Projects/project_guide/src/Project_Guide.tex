@@ -9,6 +9,7 @@
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{fancyhdr, parskip}
 \usepackage{listings}
+\usepackage{xcolor}
 \usepackage{placeins}
 
 % Tables and Figures
@@ -33,7 +34,7 @@
   \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta
+    filecolor=magenta,
     urlcolor=cyan
   }
 
@@ -63,7 +64,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Graphics Information
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\graphicspath{../src/images}
+\definecolor{codegreen}{rgb}{0,0.8,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolor}{rgb}{0.92,0.95,0.92}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Start Document
@@ -97,40 +101,42 @@
 
   \input{../src/Project_B.tex}
 
-  \import{src}{Project_C.tex}
+  \import{.}{Project_C.tex}
 
 \appendix
 
-  \chapter{How do I write a program?}
-  \label{app:how_do_i_write_a_program}
+  % \import{.}{Basic_Programming_Principles.tex}
 
-  \chapter{Developing in Windows vs Linux vs Mac}
-  \label{app:dev_os}
+  % \chapter{How do I write a program?}
+  % \label{app:how_do_i_write_a_program}
 
-    \section{WSL: The Best of Both Worlds?}
+  % \chapter{Developing in Windows vs Linux vs Mac}
+  % \label{app:dev_os}
 
-  \chapter{Tool Installations}
-  \label{app:tool_installations}
-    This appendix contains the instructions necessary to install the various tools on a variety of operating
-      systems.
-    Currently it is heavily lacking, but can be easily updated upon request if a scout is opting to use
-      an operating system and language which are not currently listed.
+  %   \section{WSL: The Best of Both Worlds?}
 
-    \section{JavaScript}
+  % \chapter{Tool Installations}
+  % \label{app:tool_installations}
+  %   This appendix contains the instructions necessary to install the various tools on a variety of operating
+  %     systems.
+  %   Currently it is heavily lacking, but can be easily updated upon request if a scout is opting to use
+  %     an operating system and language which are not currently listed.
 
-    \section{Python}
+  %   \section{JavaScript}
 
-    \section{C++}
+  %   \section{Python}
 
-    \section{C}
+  %   \section{C++}
 
-    \section{BASIC}
+  %   \section{C}
 
-    \section{Fortran}
+  %   \section{BASIC}
 
-    \section{Prolog}
+  %   \section{Fortran}
 
-    \section{SystemVerilog, Verilog, VHDL}
-    \label{app:installations:HDL}
+  %   \section{Prolog}
+
+  %   \section{SystemVerilog, Verilog, VHDL}
+  %   \label{app:installations:HDL}
 
 \end{document}
